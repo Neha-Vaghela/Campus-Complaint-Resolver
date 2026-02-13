@@ -122,7 +122,7 @@
                         <ImageView
                             android:layout_width="4dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/line"
+                            android:src="@drawable/yellow_line"
                             android:layout_gravity="center"/>
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -163,7 +163,7 @@
                         <ImageView
                             android:layout_width="4dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/line"
+                            android:src="@drawable/green_line"
                             android:layout_gravity="center"/>
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -197,7 +197,7 @@
                         <ImageView
                             android:layout_width="4dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/line"
+                            android:src="@drawable/blue_line"
                             android:layout_gravity="center"/>
                         <LinearLayout
                             android:layout_width="wrap_content"
