@@ -1,40 +1,48 @@
-package com.clg_complaint_Solver.quickresolve;
+package com.clg_complaint_Solver.quickresolve.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import com.clg_complaint_Solver.quickresolve.Adapter.ActivityAdapter;
 import com.clg_complaint_Solver.quickresolve.Model.ActivityModel;
+import com.clg_complaint_Solver.quickresolve.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class DeshboardFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private ActivityAdapter adapter;
     private List<ActivityModel> activityList;
 
+
+
+    @SuppressLint("MissingInflatedId")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_deshboard, container, false);
 
         // 1. Initialize the UI component
-        recyclerView = findViewById(R.id.rvRecentActivity);
-
-
+        recyclerView = view.findViewById(R.id.rvRecentActivity);
         addSampleData(); // Logic to fill the list
 
-
+        return  view;
     }
     private void addSampleData() {
 
         // 2. Set the LayoutManager (Vertical list)
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         // 3. Prepare your data list
         activityList = new ArrayList<>();

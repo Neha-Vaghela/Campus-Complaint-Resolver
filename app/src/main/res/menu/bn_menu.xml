@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+     <item
+            android:id="@+id/deshboard"
+            android:title="Deshboard"
+            android:icon="@drawable/ic_deshboard"/>
+        <item
+            android:id="@+id/submit_complaint"
+            android:title="Submit"
+            android:icon="@drawable/ic_submit"/>
+        <item
+            android:id="@+id/issues"
+            android:title="My issues"
+            android:icon="@drawable/ic_issue"/>
+        <item
+            android:id="@+id/profile"
+            android:title="Profile"
+            android:icon="@drawable/ic_person_2"/>
+
+
+
+</menu>

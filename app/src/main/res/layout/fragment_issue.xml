@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.IssueFragment"
+    android:background="#F8F9FB"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="My Complaints"
+            android:textColor="#1A1C1E"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerTitle"
+            android:layout_marginStart="16dp"
+            android:text="3 complaints"
+            android:textColor="#74777F" />
+
+        <HorizontalScrollView
+            android:id="@+id/filterScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/countText"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:singleSelection="true"
+                app:chipSpacingHorizontal="8dp">
+
+                <!-- ALL -->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:checked="true"
+                    android:textStyle="bold"
+                    android:textColor="#0F766E"
+                    app:chipCornerRadius="50dp"
+                    app:chipBackgroundColor="@null"
+                    android:background="@drawable/chip_bg_selector"
+                    app:chipIconVisible="true"
+                    app:chipIconSize="8dp"
+                    app:rippleColor="@null"
+                    app:checkedIconVisible="false"/>
+
+
+                <!-- PENDING -->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pending"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    app:chipCornerRadius="50dp"
+                    android:background="@drawable/chip_bg_selector"
+                    app:chipIcon="@drawable/ic_dot_red"
+                    app:chipIconVisible="true"
+                    app:chipIconSize="8dp"/>
+
+                <!-- IN PROGRESS -->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In Progress"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    app:chipCornerRadius="50dp"
+                    android:background="@drawable/chip_bg_selector"
+                    app:chipIcon="@drawable/yellow_dot"
+                    app:chipIconVisible="true"
+                    app:chipIconSize="8dp"/>
+
+                <!-- RESOLVED -->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resolved"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    app:chipCornerRadius="50dp"
+                    android:background="@drawable/chip_bg_selector"
+                    app:chipIcon="@drawable/grren_dot"
+                    app:chipIconVisible="true"
+                    app:chipIconSize="8dp"/>
+
+                <!-- ESCALATED -->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escalated"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    app:chipCornerRadius="50dp"
+                    android:background="@drawable/chip_bg_selector"
+                    app:chipIcon="@drawable/blue_dot"
+                    app:chipIconVisible="true"
+                    app:chipIconSize="8dp"/>
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/filterScroll"
+            android:clipToPadding="false"
+            android:padding="8dp"
+            android:layout_marginBottom="80dp"/>
+
+
+
+</RelativeLayout>
